@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobGenie - Your Career Wishes Granted</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/job-cards.css">
+    <link rel="stylesheet" href="css/modern-search.css">
+    <link rel="stylesheet" href="css/ukpsc-form.css">
+    <link rel="stylesheet" href="css/section-colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="dark" id="main-body">
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="container">
+            <!-- Main Hero Content -->
+            <div class="hero-content-wrapper">
+                <!-- Category icon 1 (Banking) - Positioned top left -->
+                <div class="category-icon-wrapper floating-icon top-left">
+                    <div class="category-icon banking">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <span>Banking</span>
+                </div>
+
+                <!-- Category icon 2 (Defence) - Positioned top right -->
+                <div class="category-icon-wrapper floating-icon top-right">
+                    <div class="category-icon defence">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <span>Defence</span>
+                </div>
+
+                <!-- Left Success Story -->
+                <div class="success-story left-story">
+                    <div class="success-photo-wrapper">
+                        <div class="success-photo">
+                            <img src="images/employe1.jpg" alt="Deepak P. - Bank PO Success" loading="lazy">
+                            <div class="success-badge">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="success-info">
+                        <h3 class="success-name">Deepak P.</h3>
+                        <p class="success-role">Bank PO Success</p>
+                        <div class="success-quote">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>JobGenie helped me crack the exam in my first attempt!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Content -->
+                <div class="hero-center-content">
+                    <div class="trust-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Trusted by millions</span>
+                    </div>
+
+                    <h1 class="hero-title">Find Your Dream <br>Government Job</h1>
+                    <div class="hero-brand">JobGenie</div>
+
+                    <p class="hero-description">
+                        India's leading government job portal with latest updates <br>
+                        on jobs, exams, and results
+                    </p>
+
+                    <!-- Mobile-only category icons row -->
+                    <div class="category-icons-mobile-row">
+                        <!-- These will be shown only on mobile -->
+                        <div class="category-icon-wrapper">
+                            <div class="category-icon banking">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <span>Banking</span>
+                        </div>
+                        <div class="category-icon-wrapper">
+                            <div class="category-icon defence">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Defence</span>
+                        </div>
+                        <div class="category-icon-wrapper">
+                            <div class="category-icon railway">
+                                <i class="fas fa-train"></i>
+                            </div>
+                            <span>Railway</span>
+                        </div>
+                        <div class="category-icon-wrapper">
+                            <div class="category-icon teaching">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <span>Teaching</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-stats-row">
+                        <div class="hero-stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Job Listings</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">5M+</span>
+                            <span class="stat-label">Active Users</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#" class="btn-primary">
+                            <i class="fas fa-search"></i> Explore Jobs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Success Stories -->
+                <div class="success-stories-right">
+                    <div class="success-story right-story">
+                        <div class="success-photo-wrapper">
+                            <div class="success-photo">
+                                <img src="images/employe2.jpg" alt="Priya S. - SSC Success" loading="lazy">
+                                <div class="success-badge">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="success-info">
+                            <h3 class="success-name">Priya S.</h3>
+                            <p class="success-role">SSC Success</p>
+                        </div>
+                    </div>
+
+                    <div class="success-story right-story">
+                        <div class="success-photo-wrapper">
+                            <div class="success-photo">
+                                <img src="images/employe3.jpg" alt="Rajesh K. - Railway Exam Success" loading="lazy">
+                                <div class="success-badge">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="success-info">
+                            <h3 class="success-name">Rajesh K.</h3>
+                            <p class="success-role">Railway Exam Success</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category icon 3 (Railway) - Positioned bottom left -->
+                <div class="category-icon-wrapper floating-icon bottom-left">
+                    <div class="category-icon railway">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <span>Railway</span>
+                </div>
+
+                <!-- Category icon 4 (Teaching) - Positioned bottom right -->
+                <div class="category-icon-wrapper floating-icon bottom-right">
+                    <div class="category-icon teaching">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <span>Teaching</span>
+                </div>
+            </div>
+
+            <!-- Job Search Section -->
+            <div class="job-search-section">
+                <h2>Find Your Perfect Job</h2>
+                <div class="modern-search-container">
+                    <div class="modern-search-box">
+                        <form class="modern-search-form" id="home-search-form">
+                            <div class="search-input-group">
+                                <input type="text" id="home-job-search" placeholder="Job title, keywords, or company">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="search-input-group">
+                                <input type="text" id="home-job-location" placeholder="Location">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <button type="submit" id="home-search-btn" class="search-btn">
+                                <i class="fas fa-search"></i> Search Jobs
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="popular-searches">
+                    <span>Popular:</span>
+                    <a href="latest-jobs.html?category=banking">Banking</a>
+                    <a href="latest-jobs.html?category=railway">Railway</a>
+                    <a href="latest-jobs.html?category=defence">Defence</a>
+                    <a href="latest-jobs.html?category=teaching">Teaching</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff8f5" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Featured Jobs Section -->
+    <section class="featured-jobs-section">
+        <div class="section-shape top"></div>
+        <div class="container">
+            <div class="section-title reveal">
+                <div class="section-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="section-label">LATEST OPPORTUNITIES</div>
+                <h2>Featured Government Jobs</h2>
+                <p>Explore the latest government job opportunities from various departments and organizations across India.</p>
+            </div>
+
+            <div class="job-cards-grid" id="featured-jobs-grid">
+                <!-- Featured jobs will be loaded from JavaScript -->
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Loading featured jobs...</p>
+                </div>
+            </div>
+
+            <div class="section-action reveal">
+                <a href="latest-jobs.html" class="view-all-btn">
+                    View All Jobs <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="section-shape bottom"></div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f5fbff" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <div class="section-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Why Choose JobGenie</h2>
+                <p>We provide comprehensive resources to help you succeed in your government job search</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Latest Job Updates</h3>
+                        <p>Get real-time notifications about the latest government job openings across various sectors and departments.</p>
+                        <div class="feature-stats">
+                            <div class="feature-stat">
+                                <span>100+</span>
+                                <small>Daily Updates</small>
+                            </div>
+                        </div>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Exam Resources</h3>
+                        <p>Access comprehensive study materials, previous year papers, and mock tests to prepare for competitive exams.</p>
+                        <div class="feature-stats">
+                            <div class="feature-stat">
+                                <span>5000+</span>
+                                <small>Study Materials</small>
+                            </div>
+                        </div>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Timely Alerts</h3>
+                        <p>Never miss important dates with our timely notifications about application deadlines, exam dates, and results.</p>
+                        <div class="feature-stats">
+                            <div class="feature-stat">
+                                <span>24/7</span>
+                                <small>Notifications</small>
+                            </div>
+                        </div>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f5fff8" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,213.3C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="section-shape top"></div>
+        <div class="container">
+            <div class="section-title reveal">
+                <div class="section-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h2>Browse By Categories</h2>
+                <p>Explore government job opportunities across different sectors</p>
+            </div>
+
+            <div class="categories-grid" id="job-categories-grid">
+                <!-- Job categories will be loaded from JavaScript -->
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Loading job categories...</p>
+                </div>
+            </div>
+
+            <div class="categories-highlight reveal">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="highlight-content">
+                        <h3>Prepare for Success</h3>
+                        <p>Access our comprehensive study materials and mock tests to prepare for your dream government job.</p>
+                        <a href="#" class="btn btn-sm">Start Preparing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-shape bottom"></div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f8f5ff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,122.7C672,107,768,85,864,96C960,107,1056,149,1152,154.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content-new">
+                <div class="about-header">
+                    <div class="about-badge">About Us</div>
+                    <h2>About JobGenie</h2>
+                </div>
+
+                <div class="about-cards-container">
+                    <div class="about-card reveal-item">
+                        <div class="about-card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To simplify the government job search process and help candidates stay updated with the latest information to achieve their career goals.</p>
+                    </div>
+
+                    <div class="about-card reveal-item" data-delay="200">
+                        <div class="about-card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To become India's most trusted platform for government job seekers by providing accurate, timely, and comprehensive resources.</p>
+                    </div>
+
+                    <div class="about-card reveal-item" data-delay="400">
+                        <div class="about-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>Integrity, accuracy, accessibility, and dedication to helping millions find their dream government jobs across India.</p>
+                    </div>
+                </div>
+
+                <div class="about-description">
+                    <p>JobGenie is India's leading government job portal dedicated to helping millions of job seekers find their dream government jobs. We provide comprehensive information about job openings, exam notifications, admit cards, results, and study resources.</p>
+                </div>
+
+                <div class="about-features-grid">
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="about-feature-text">Verified Job Listings</div>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="about-feature-text">Real-time Updates</div>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="about-feature-text">Expert Guidance</div>
+                    </div>
+                </div>
+
+                <div class="about-stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">5M+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Job Listings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+
+                <div class="about-action">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i> Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fffaf5" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,144C384,171,480,181,576,165.3C672,149,768,107,864,101.3C960,96,1056,128,1152,133.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section-new">
+        <div class="container">
+            <div class="cta-container">
+                <div class="cta-left">
+                    <div class="cta-badge">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </div>
+                    <h2>Ready to Start Your Government Job Journey?</h2>
+                    <p>Join thousands of successful candidates who found their dream government jobs through JobGenie. Sign up today to get personalized job alerts and access to premium study resources.</p>
+
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Sign Up Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-right">
+                    <div class="cta-features-grid">
+                        <div class="cta-feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Job Alerts</h3>
+                                <p>Get timely notifications for relevant job openings</p>
+                            </div>
+                        </div>
+
+                        <div class="cta-feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Study Materials</h3>
+                                <p>Access comprehensive resources for exam preparation</p>
+                            </div>
+                        </div>
+
+                        <div class="cta-feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Mock Tests</h3>
+                                <p>Practice with real exam-like questions and scenarios</p>
+                            </div>
+                        </div>
+
+                        <div class="cta-feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Expert Support</h3>
+                                <p>Get guidance from experienced professionals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/simple-theme.js"></script>
+    <script src="js/page-handler.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/includes.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

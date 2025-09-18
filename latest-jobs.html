@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Jobs - JobGenie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/job-cards.css">
+    <link rel="stylesheet" href="css/modern-search.css">
+    <link rel="stylesheet" href="css/ukpsc-form.css">
+    <link rel="stylesheet" href="css/section-colors.css">
+    <link rel="stylesheet" href="css/page-headers.css">
+    <link rel="stylesheet" href="css/cta-section-v3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="dark" id="main-body">
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Title Section -->
+    <section class="page-header jobs-header">
+        <!-- Background Elements -->
+        <div class="page-header-bg"></div>
+        <div class="page-header-particles" id="header-particles"></div>
+
+        <!-- Floating Icons -->
+        <div class="floating-icon top-left">
+            <div class="header-icon">
+                <i class="fas fa-university"></i>
+            </div>
+        </div>
+        <div class="floating-icon top-right">
+            <div class="header-icon">
+                <i class="fas fa-train"></i>
+            </div>
+        </div>
+        <div class="floating-icon bottom-left">
+            <div class="header-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+        </div>
+        <div class="floating-icon bottom-right">
+            <div class="header-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-header-content reveal">
+                <h1>Latest Government Jobs</h1>
+                <p>Find and apply for the latest government job opportunities across various sectors</p>
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Latest Jobs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Shape Divider -->
+        <div class="page-header-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,0L120,5.3C240,11,480,21,720,26.7C960,32,1200,32,1320,32L1440,32L1440,60L1320,60C1200,60,960,60,720,60C480,60,240,60,120,60L0,60Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Latest Jobs Content -->
+    <section class="content-section jobs-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <div class="section-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2>Latest Job Opportunities</h2>
+                <p>Explore thousands of government job vacancies across various sectors</p>
+            </div>
+
+            <!-- Modern Search Box -->
+            <div class="modern-search-container reveal">
+                <div class="modern-search-box">
+                    <form id="search-form" class="modern-search-form" onsubmit="return false;">
+                        <div class="search-input-group">
+                            <input type="text" id="job-search" placeholder="Search jobs...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="search-input-group">
+                            <select id="job-category">
+                                <option value="">All Categories</option>
+                                <option value="central">Central Government</option>
+                                <option value="state">State Government</option>
+                                <option value="banking">Banking</option>
+                                <option value="railway">Railway</option>
+                                <option value="defence">Defence</option>
+                                <option value="teaching">Teaching</option>
+                                <option value="police">Police</option>
+                            </select>
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <button type="button" id="search-btn" class="search-btn" onclick="loadJobs(1)">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Jobs Container -->
+            <div class="job-cards-grid reveal" id="jobs-container">
+                <!-- Jobs will be loaded here -->
+                <div class="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Loading latest jobs...</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination reveal" id="pagination">
+                <!-- Pagination will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories Section -->
+    <section class="categories-section reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse Jobs by Category</h2>
+                <p>Find jobs in your preferred sector</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Banking</h3>
+                    <p>SBI, RBI, NABARD, IBPS</p>
+                    <a href="latest-jobs.html?category=banking" class="category-link">View Jobs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h3>Railway</h3>
+                    <p>RRB, NTPC, Group D, ALP</p>
+                    <a href="latest-jobs.html?category=railway" class="category-link">View Jobs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Defence</h3>
+                    <p>Army, Navy, Air Force, BSF</p>
+                    <a href="latest-jobs.html?category=defence" class="category-link">View Jobs <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Teaching</h3>
+                    <p>UGC NET, CTET, TET, Professor</p>
+                    <a href="latest-jobs.html?category=teaching" class="category-link">View Jobs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section reveal">
+        <div class="container">
+            <div class="tips-card">
+                <div class="tips-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="tips-content">
+                    <h3>Job Application Tips</h3>
+                    <p>Follow these tips to increase your chances of success</p>
+                    <ul class="tips-list">
+                        <li><i class="fas fa-check-circle"></i> Read the eligibility criteria carefully before applying</li>
+                        <li><i class="fas fa-check-circle"></i> Submit your application well before the deadline</li>
+                        <li><i class="fas fa-check-circle"></i> Double-check all details in your application form</li>
+                        <li><i class="fas fa-check-circle"></i> Keep track of important dates for exams and interviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <!-- Background Elements -->
+        <div class="cta-bg-circle circle-1"></div>
+        <div class="cta-bg-circle circle-2"></div>
+        <div class="cta-bg-circle circle-3"></div>
+
+        <!-- Floating Icons -->
+        <div class="cta-icon-float icon-1">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="cta-icon-float icon-2">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="cta-icon-float icon-3">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="cta-icon-float icon-4">
+            <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="cta-container">
+            <div class="cta-content reveal">
+                <div class="cta-badge">
+                    <i class="fas fa-bell"></i> Job Alerts
+                </div>
+                <h2>Never Miss a Job Opportunity!</h2>
+                <p>Get personalized job alerts delivered directly to your inbox and stay ahead of the competition with instant notifications about the latest government job openings.</p>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-bell"></i>
+                        <span>Daily Alerts</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-filter"></i>
+                        <span>Customized Filters</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Deadline Reminders</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Notifications</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn cta-btn-primary">
+                        <i class="fas fa-bell"></i> Set Job Alerts
+                    </a>
+                    <a href="#" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/simple-theme.js"></script>
+    <script src="js/page-handler.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/includes.js"></script>
+
+    <!-- Initialize particles for header and CTA section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header particles
+            if (typeof particlesJS !== 'undefined' && document.getElementById('header-particles')) {
+                particlesJS('header-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 30,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 5,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.2,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.5
+                                }
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+
+            // CTA section particles
+            if (typeof particlesJS !== 'undefined' && document.getElementById('cta-particles')) {
+                particlesJS('cta-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 20,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.2,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 4,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.15,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1.5,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.3
+                                }
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

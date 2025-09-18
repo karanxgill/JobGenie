@@ -1,0 +1,53 @@
+<aside class="admin-sidebar">
+    <div class="sidebar-header">
+      
+        <h2>JobGenie</h2>
+    </div>
+    <nav class="sidebar-nav">
+        <ul>
+            <li id="nav-dashboard">
+                <a href="dashboard.html" aria-label="Dashboard"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
+            </li>
+            <li id="nav-jobs">
+                <a href="jobs.html" aria-label="Jobs"><i class="fas fa-briefcase"></i> <span>Jobs</span></a>
+            </li>
+            <li id="nav-results">
+                <a href="results.html" aria-label="Results"><i class="fas fa-poll"></i> <span>Results</span></a>
+            </li>
+            <li id="nav-admit-cards">
+                <a href="admit-cards.html" aria-label="Admit Cards"><i class="fas fa-id-card"></i> <span>Admit Cards</span></a>
+            </li>
+            <li id="nav-answer-keys">
+                <a href="answer-keys.html" aria-label="Answer Keys"><i class="fas fa-key"></i> <span>Answer Keys</span></a>
+            </li>
+            <li id="nav-syllabus">
+                <a href="syllabus.html" aria-label="Syllabus"><i class="fas fa-book"></i> <span>Syllabus</span></a>
+            </li>
+            <li id="nav-study-materials">
+                <a href="study-materials.html" aria-label="Study Materials"><i class="fas fa-book-reader"></i> <span>Study Materials</span></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        
+        <a href="#" id="logout-btn" aria-label="Logout"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+    </div>
+</aside>
+<script>
+// Highlight the active nav item based on current page
+(function() {
+    const page = window.location.pathname.split('/').pop();
+    const navMap = {
+        'dashboard.html': 'nav-dashboard',
+        'jobs.html': 'nav-jobs',
+        'results.html': 'nav-results',
+        'admit-cards.html': 'nav-admit-cards',
+        'answer-keys.html': 'nav-answer-keys',
+        'syllabus.html': 'nav-syllabus',
+        'study-materials.html': 'nav-study-materials'
+    };
+    if (navMap[page]) {
+        document.getElementById(navMap[page]).classList.add('active');
+    }
+})();
+</script>

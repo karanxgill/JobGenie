@@ -1,0 +1,115 @@
+/* UKPSC Form Styles */
+
+/* UKPSC input field in job cards - Global styles */
+.job-card-simple input,
+.job-card-simple select,
+.job-card-simple textarea,
+.job-card-simple .job-org,
+.job-card-simple .job-title,
+.job-card-simple .job-details {
+    background-color: transparent !important;
+}
+
+/* Light mode styles - Global */
+body.light .job-card-simple input,
+body.light .job-card-simple select,
+body.light .job-card-simple textarea,
+body.light .job-card-simple .job-org,
+body.light .job-card-simple .job-title,
+body.light .job-card-simple .job-details {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-color: #e0e0e0 !important;
+}
+
+/* Dark mode styles - Global */
+body.dark .job-card-simple input,
+body.dark .job-card-simple select,
+body.dark .job-card-simple textarea,
+body.dark .job-card-simple .job-org,
+body.dark .job-card-simple .job-title,
+body.dark .job-card-simple .job-details {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+    border-color: #3a3f55 !important;
+}
+
+/* UKPSC specific styles */
+.job-card-simple h3.job-title:contains("UKPSC"),
+.job-card-simple .job-org:contains("UKPSC"),
+.job-card-simple input[value*="UKPSC"],
+.job-card-simple input[placeholder*="UKPSC"] {
+    background-color: transparent !important;
+}
+
+/* Light mode - UKPSC specific */
+body.light .job-card-simple h3.job-title:contains("UKPSC"),
+body.light .job-card-simple .job-org:contains("UKPSC"),
+body.light .job-card-simple input[value*="UKPSC"],
+body.light .job-card-simple input[placeholder*="UKPSC"] {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-color: #e0e0e0 !important;
+}
+
+/* Dark mode - UKPSC specific */
+body.dark .job-card-simple h3.job-title:contains("UKPSC"),
+body.dark .job-card-simple .job-org:contains("UKPSC"),
+body.dark .job-card-simple input[value*="UKPSC"],
+body.dark .job-card-simple input[placeholder*="UKPSC"] {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+    border-color: #3a3f55 !important;
+}
+
+/* Direct targeting for UKPSC job cards */
+.job-card-simple:has(.job-org:contains("UKPSC")) input,
+.job-card-simple:has(.job-title:contains("UKPSC")) input {
+    background-color: transparent !important;
+}
+
+/* Light mode - Direct targeting */
+body.light .job-card-simple:has(.job-org:contains("UKPSC")) input,
+body.light .job-card-simple:has(.job-title:contains("UKPSC")) input {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-color: #e0e0e0 !important;
+}
+
+/* Dark mode - Direct targeting */
+body.dark .job-card-simple:has(.job-org:contains("UKPSC")) input,
+body.dark .job-card-simple:has(.job-title:contains("UKPSC")) input {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+    border-color: #3a3f55 !important;
+}
+
+/* Direct fix for UKPSC input field */
+.job-card-simple .job-org:contains("UKPSC") {
+    background-color: transparent !important;
+}
+
+body.light .job-card-simple .job-org:contains("UKPSC") {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+}
+
+body.dark .job-card-simple .job-org:contains("UKPSC") {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Inline style override */
+.job-card-simple .job-org[style*="background"] {
+    background-color: transparent !important;
+}
+
+body.light .job-card-simple .job-org[style*="background"] {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+}
+
+body.dark .job-card-simple .job-org[style*="background"] {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+}

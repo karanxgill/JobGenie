@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials - JobGenie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/section-colors.css">
+    <link rel="stylesheet" href="css/page-headers.css">
+    <link rel="stylesheet" href="css/cta-section-v3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="dark" id="main-body">
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Title Section -->
+    <section class="page-header study-materials-header">
+        <!-- Background Elements -->
+        <div class="page-header-bg"></div>
+        <div class="page-header-particles" id="header-particles"></div>
+
+        <!-- Floating Icons -->
+        <div class="floating-icon top-left">
+            <div class="header-icon">
+                <i class="fas fa-book"></i>
+            </div>
+        </div>
+        <div class="floating-icon top-right">
+            <div class="header-icon">
+                <i class="fas fa-video"></i>
+            </div>
+        </div>
+        <div class="floating-icon bottom-left">
+            <div class="header-icon">
+                <i class="fas fa-file-pdf"></i>
+            </div>
+        </div>
+        <div class="floating-icon bottom-right">
+            <div class="header-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-header-content reveal">
+                <h1>Study Materials</h1>
+                <p>Prepare for your dream government job with our comprehensive study resources</p>
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Study Materials</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Shape Divider -->
+        <div class="page-header-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,0L120,5.3C240,11,480,21,720,26.7C960,32,1200,32,1320,32L1440,32L1440,60L1320,60C1200,60,960,60,720,60C480,60,240,60,120,60L0,60Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Study Materials Content -->
+    <section class="content-section study-materials-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <div class="section-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2>Comprehensive Study Materials</h2>
+                <p>Prepare for your dream job with our extensive collection of study resources</p>
+            </div>
+
+
+            <!-- Resource Type Tabs -->
+            <div class="resource-tabs reveal">
+                <div class="tab active" data-tab="notes">
+                    <div class="tab-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <span class="tab-text">Notes</span>
+                </div>
+                <div class="tab" data-tab="ebooks">
+                    <div class="tab-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <span class="tab-text">E-Books</span>
+                </div>
+                <div class="tab" data-tab="videos">
+                    <div class="tab-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <span class="tab-text">Videos</span>
+                </div>
+                <div class="tab" data-tab="mock-tests">
+                    <div class="tab-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <span class="tab-text">Mock Tests</span>
+                </div>
+            </div>
+
+            <div class="tab-container reveal">
+                <!-- Notes Tab Content -->
+                <div class="tab-content active" id="notes-content">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-book-open"></i> Study Notes</h3>
+                        <p>Download comprehensive notes for various government exams</p>
+                    </div>
+                    <div class="resource-grid">
+                        <!-- Notes will be loaded dynamically from JavaScript -->
+                        <div class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>Loading study notes...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Books Tab Content -->
+                <div class="tab-content" id="ebooks-content">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-book"></i> E-Books Collection</h3>
+                        <p>Access our library of e-books for in-depth preparation</p>
+                    </div>
+                    <div class="resource-grid">
+                        <!-- E-Books will be loaded dynamically from JavaScript -->
+                        <div class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>Loading e-books...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Videos Tab Content -->
+                <div class="tab-content" id="videos-content">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-video"></i> Video Lectures</h3>
+                        <p>Watch expert video lectures on important topics</p>
+                    </div>
+                    <div class="resource-grid">
+                        <!-- Videos will be loaded dynamically from JavaScript -->
+                        <div class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>Loading videos...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Tests Tab Content -->
+                <div class="tab-content" id="mock-tests-content">
+                    <div class="tab-header">
+                        <h3><i class="fas fa-clipboard-check"></i> Mock Tests</h3>
+                        <p>Practice with our mock tests to evaluate your preparation</p>
+                    </div>
+                    <div class="resource-grid">
+                        <!-- Mock Tests will be loaded dynamically from JavaScript -->
+                        <div class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>Loading mock tests...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Tips Section -->
+            <div class="study-tips-section reveal">
+                <div class="tips-card">
+                    <div class="tips-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="tips-content">
+                        <h3>Study Tips & Strategies</h3>
+                        <p>Get the most out of our study materials with these expert tips</p>
+                        <ul class="tips-list">
+                            <li><i class="fas fa-check-circle"></i> Create a structured study plan</li>
+                            <li><i class="fas fa-check-circle"></i> Practice with mock tests regularly</li>
+                            <li><i class="fas fa-check-circle"></i> Focus on your weak areas</li>
+                            <li><i class="fas fa-check-circle"></i> Revise important topics frequently</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <!-- Background Elements -->
+        <div class="cta-bg-circle circle-1"></div>
+        <div class="cta-bg-circle circle-2"></div>
+        <div class="cta-bg-circle circle-3"></div>
+
+        <!-- Floating Icons -->
+        <div class="cta-icon-float icon-1">
+            <i class="fas fa-book-open"></i>
+        </div>
+        <div class="cta-icon-float icon-2">
+            <i class="fas fa-award"></i>
+        </div>
+        <div class="cta-icon-float icon-3">
+            <i class="fas fa-video"></i>
+        </div>
+        <div class="cta-icon-float icon-4">
+            <i class="fas fa-clipboard-check"></i>
+        </div>
+
+        <div class="cta-container">
+            <div class="cta-content reveal">
+                <div class="cta-badge">
+                    <i class="fas fa-rocket"></i> Boost Your Preparation
+                </div>
+                <h2>Ready to Ace Your Government Exams?</h2>
+                <p>Access premium study materials, mock tests, and expert guidance to enhance your preparation and significantly increase your chances of success in competitive government exams.</p>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-book"></i>
+                        <span>Premium Notes</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Mock Tests</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-video"></i>
+                        <span>Video Lectures</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-headset"></i>
+                        <span>Expert Support</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn cta-btn-primary">
+                        <i class="fas fa-graduation-cap"></i> Get Premium
+                    </a>
+                    <a href="#" class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delete Confirmation Modal (Reusable for Admin) -->
+    <div id="delete-modal" class="modal" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+      <div class="modal-content" style="background: var(--card-bg); color: var(--text-color); padding: 2rem; border-radius: 8px; max-width: 400px; margin: auto; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 1px solid var(--border-color);">
+        <p>Are you sure you want to delete this study material?</p>
+        <button id="confirm-delete-btn" class="btn btn-danger" style="margin-right: 8px; background-color: #dc3545; color: white;">Yes, Delete</button>
+        <button onclick="closeDeleteModal()" class="btn" style="background-color: var(--button-color); color: white;">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/simple-theme.js"></script>
+    <script src="js/page-handler.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/includes.js"></script>
+
+    <!-- Direct tab functionality script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add direct tab switching functionality
+            const tabs = document.querySelectorAll('.resource-tabs .tab');
+            console.log('Direct tabs found:', tabs.length);
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    console.log('Tab clicked directly:', this.getAttribute('data-tab'));
+
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab content
+                    const tabContents = document.querySelectorAll('.tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Show selected tab content
+                    const tabName = this.getAttribute('data-tab');
+                    const targetContent = document.getElementById(`${tabName}-content`);
+
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        console.log('Activated tab content directly:', tabName);
+                    } else {
+                        console.error('Tab content not found directly:', tabName);
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/navigation-fix.js"></script>
+
+    <!-- Initialize particles for header and CTA section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header particles
+            if (typeof particlesJS !== 'undefined' && document.getElementById('header-particles')) {
+                particlesJS('header-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 30,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 5,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.2,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.5
+                                }
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+
+            // CTA section particles
+            if (typeof particlesJS !== 'undefined' && document.getElementById('cta-particles')) {
+                particlesJS('cta-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 20,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.2,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 4,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.15,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 1.5,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.3
+                                }
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

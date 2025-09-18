@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card Details - JobGenie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="light-theme">
+    <!-- Header will be loaded dynamically -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <a href="admit-cards.html">Admit Cards</a> &gt; <span id="admit-card-title-breadcrumb">Admit Card Details</span>
+        </div>
+
+        <div id="admit-card-details-container" class="details-container">
+            <div class="loading">Loading admit card details...</div>
+        </div>
+    </main>
+
+    <!-- Footer will be loaded dynamically -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/simple-theme.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/includes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Initialize theme toggle
+            initThemeToggle();
+
+            // Get admit card ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const admitCardId = urlParams.get('id');
+
+            if (!admitCardId) {
+                // No ID provided, show error
+                document.getElementById('admit-card-details-container').innerHTML = `
+                    <div class="error-message">
+                        <h2>Error</h2>
+                        <p>No admit card ID provided. Please go back to the <a href="admit-cards.html">admit cards page</a> and select an admit card.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                // Fetch admit card details from API
+                const admitCard = await apiService.getAdmitCard(admitCardId);
+
+                // Update breadcrumb
+                document.getElementById('admit-card-title-breadcrumb').textContent = admitCard.title;
+
+                // Format dates
+                const examDate = admitCard.exam_date ? formatDate(admitCard.exam_date) : 'N/A';
+                const releaseDate = admitCard.release_date ? formatDate(admitCard.release_date) : 'N/A';
+
+                // Display admit card details
+                document.getElementById('admit-card-details-container').innerHTML = `
+                    <h1>${admitCard.title}</h1>
+
+                    <div class="details-meta">
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fas fa-building"></i> Organization:</span>
+                            <span class="meta-value">${admitCard.organization}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fas fa-calendar-alt"></i> Exam Date:</span>
+                            <span class="meta-value">${examDate}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fas fa-calendar-check"></i> Release Date:</span>
+                            <span class="meta-value">${releaseDate}</span>
+                        </div>
+                        ${admitCard.category ? `
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fas fa-tag"></i> Category:</span>
+                            <span class="meta-value">${getCategoryName(admitCard.category)}</span>
+                        </div>
+                        ` : ''}
+                    </div>
+
+                    <div class="details-description">
+                        <h2>Description</h2>
+                        <p>${admitCard.description || 'No description available.'}</p>
+                    </div>
+
+                    <div class="details-actions">
+                        <a href="${admitCard.download_link}" target="_blank" class="btn primary-btn">
+                            <i class="fas fa-download"></i> Download Admit Card
+                        </a>
+                        <a href="admit-cards.html" class="btn secondary-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Admit Cards
+                        </a>
+                    </div>
+                `;
+
+                // Update page title
+                document.title = `${admitCard.title} - JobGenie`;
+
+            } catch (error) {
+                console.error('Error fetching admit card details:', error);
+
+                // Show error message
+                document.getElementById('admit-card-details-container').innerHTML = `
+                    <div class="error-message">
+                        <h2>Error</h2>
+                        <p>The admit card you're looking for could not be found. It may have been removed or the ID is invalid.</p>
+                        <p>Error details: ${error.message}</p>
+                        <a href="admit-cards.html" class="btn secondary-btn">
+                            <i class="fas fa-arrow-left"></i> Back to Admit Cards
+                        </a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+    <script src="js/navigation-fix.js"></script>
+</body>
+</html>

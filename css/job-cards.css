@@ -1,0 +1,219 @@
+/* Job Cards CSS */
+
+.job-card-simple {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg, #fff);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid var(--card-border, #f0f0f0);
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card-simple:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.job-card-simple .job-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(53, 99, 233, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--primary-color, #3563E9);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.job-card-simple:hover .job-icon {
+    background-color: var(--primary-color, #3563E9);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.job-card-simple .job-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-text, #333);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.job-card-simple .job-title a {
+    color: var(--dark-text, #333);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.job-card-simple .job-title a:hover {
+    color: #3563E9;
+}
+
+.job-card-simple .job-org {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--light-text, #555);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.job-card-simple .job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.job-card-simple .job-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--light-text, #666);
+}
+
+.job-card-simple .job-detail-item i {
+    color: var(--primary-color, #3563E9);
+    width: 16px;
+    text-align: center;
+}
+
+.job-card-simple .job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--card-border, #f0f0f0);
+}
+
+.job-card-simple .job-type {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color, #3563E9);
+    background-color: rgba(53, 99, 233, 0.1);
+    padding: 6px 12px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.job-card-simple .job-type::before {
+    content: "•";
+    display: inline-block;
+    margin-right: 6px;
+    color: var(--primary-color, #3563E9);
+    font-size: 16px;
+    line-height: 0;
+}
+
+.job-card-simple:hover .job-type {
+    background-color: rgba(53, 99, 233, 0.15);
+}
+
+.job-card-simple .apply-btn {
+    display: inline-block;
+    background-color: var(--primary-color, #3563E9);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(53, 99, 233, 0.2);
+    border: 2px solid var(--primary-color, #3563E9);
+}
+
+.job-card-simple .apply-btn:hover {
+    background-color: var(--btn-hover, #2954d4);
+    color: white;
+    box-shadow: 0 4px 8px rgba(53, 99, 233, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Job Cards Grid */
+.job-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+/* Input fields in job cards */
+.job-card-simple input,
+.job-card-simple select,
+.job-card-simple textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border, #e0e0e0);
+    background-color: var(--input-bg, #f8f9fa);
+    color: var(--input-text, #333);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Specific style for UKPSC input field */
+.job-card-simple .job-org:contains("UKPSC") input,
+.job-card-simple h3:contains("UKPSC") + input,
+.job-card-simple input[value*="UKPSC"] {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-color: #e0e0e0 !important;
+}
+
+.job-card-simple input:focus,
+.job-card-simple select:focus,
+.job-card-simple textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #3563E9);
+    box-shadow: 0 0 0 2px rgba(53, 99, 233, 0.1);
+}
+
+/* Fix for UKPSC input field in dark mode */
+body.dark .job-card-simple input,
+body.dark .job-card-simple .job-org input,
+body.dark .job-card-simple .job-title input,
+body.dark .job-card-simple .job-details input {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+    border-color: #3a3f55 !important;
+}
+
+/* Fix for UKPSC input field in light mode */
+body.light .job-card-simple input,
+body.light .job-card-simple .job-org input,
+body.light .job-card-simple .job-title input,
+body.light .job-card-simple .job-details input {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-color: #e0e0e0 !important;
+}
+
+/* Direct fix for UKPSC job card */
+body.light .job-card-simple .job-org {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+}
+
+body.dark .job-card-simple .job-org {
+    background-color: #2a2f45 !important;
+    color: #e0e0e0 !important;
+}
+
+@media (max-width: 768px) {
+    .job-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
