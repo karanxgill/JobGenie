@@ -4,57 +4,143 @@ JobGenie is a comprehensive government job portal website similar to SarkariResu
 
 ## Features
 
+### User Features
 - **Latest Jobs**: Browse and search for government job vacancies across various sectors
 - **Results**: View exam results from different government organizations
 - **Admit Cards**: Download admit cards for upcoming exams
 - **Answer Keys**: Access answer keys for completed exams
 - **Syllabus**: View and download syllabus for various government exams
+- **Study Materials**: Access notes, ebooks, and video resources
 - **Search**: Advanced search functionality to find specific information
-- **Admin Panel**: Simple admin interface to manage website content
+- **Contact**: Get in touch with support team
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- **Theme Toggle**: Switch between light and dark modes
+- **Modern UI**: Clean, professional interface with animations
+
+### Admin Features
+- **Dashboard**: Overview of all content and statistics
+- **Job Management**: Add, edit, and delete job listings
+- **Content Management**: Manage results, admit cards, answer keys, and syllabus
+- **Study Materials**: Upload and manage educational resources
+- **Important Links**: Manage external links and resources
+- **Real-time Status**: Server status indicator
+- **Responsive Admin Panel**: Mobile-friendly admin interface
 
 ## Technology Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js with Express
-- **Data Storage**: JSON (stored in database)
-- **API**: RESTful API for data operations
+### Frontend Technologies
+- **HTML5** - Structure and markup
+- **CSS3** - Styling and responsive design
+  - Custom CSS modules (style.css, responsive.css, admin.css, etc.)
+  - CSS Variables for theming
+  - Flexbox and Grid layouts
+  - CSS animations and transitions
+- **Vanilla JavaScript (ES6+)** - Client-side functionality
+  - Modular JavaScript architecture
+  - DOM manipulation
+  - API integration
+  - Theme switching (light/dark mode)
+  - Responsive navigation
+
+### Backend Technologies
+- **Node.js** (v14+) - Runtime environment
+- **Express.js** (v4.21.2) - Web framework
+- **MySQL** (v5.7+) - Database
+- **MySQL2** (v3.6.1) - MySQL driver for Node.js
+
+### External Libraries & CDNs
+- **Font Awesome** (v6.4.0) - Icons
+- **Particles.js** (v2.0.0) - Background animations
+- **Google Fonts** - Typography (Times New Roman, etc.)
+
+### Development Tools
+- **npm** - Package management
+- **Nodemon** (v3.0.1) - Development server auto-restart
+- **Bash Scripts** - Server startup automation
+
+### Architecture & Patterns
+- **RESTful API** - Backend API design
+- **MVC Pattern** - Separation of concerns
+- **Modular JavaScript** - Organized code structure
+- **Responsive Design** - Mobile-first approach
+- **Progressive Enhancement** - Works without JavaScript
 
 ## Project Structure
 
 ```
 eznaukri/
-├── index.html              # Homepage
-├── latest-jobs.html        # Jobs listing page
-├── results.html            # Results listing page
-├── admit-card.html         # Admit cards listing page
-├── answer-key.html         # Answer keys listing page
-├── syllabus.html           # Syllabus listing page
-├── search.html             # Search page
-├── contact.html            # Contact page
+├── index.html                    # Homepage
+├── latest-jobs.html              # Jobs listing page
+├── results.html                  # Results listing page
+├── admit-cards.html              # Admit cards listing page
+├── answer-keys.html              # Answer keys listing page
+├── syllabus.html                 # Syllabus listing page
+├── study-materials.html          # Study materials page
+├── search.html                   # Search page
+├── contact.html                  # Contact page
+├── job-details.html              # Individual job details
+├── admit-card-details.html       # Individual admit card details
+├── api-test.html                 # API testing page
 ├── css/
-│   ├── style.css           # Main stylesheet
-│   ├── responsive.css      # Responsive design styles
-│   └── admin.css           # Admin panel styles
+│   ├── style.css                 # Main stylesheet
+│   ├── responsive.css            # Responsive design styles
+│   ├── admin.css                 # Admin panel styles
+│   ├── animations.css            # CSS animations
+│   ├── job-cards.css             # Job card styles
+│   ├── modern-search.css         # Search component styles
+│   ├── page-headers.css          # Page header styles
+│   └── section-colors.css        # Section color schemes
 ├── js/
-│   ├── data.js             # JSON data storage
-│   ├── main.js             # Main JavaScript file
-│   ├── jobs.js             # Jobs page functionality
-│   ├── results.js          # Results page functionality
-│   ├── admit-cards.js      # Admit cards page functionality
-│   ├── answer-keys.js      # Answer keys page functionality
-│   ├── syllabus.js         # Syllabus page functionality
-│   ├── search.js           # Search page functionality
-│   ├── contact.js          # Contact page functionality
-│   ├── admin-login.js      # Admin login functionality
-│   ├── admin.js            # Admin panel main functionality
-│   └── admin-jobs.js       # Admin jobs management
+│   ├── main.js                   # Main JavaScript file
+│   ├── home.js                   # Homepage functionality
+│   ├── jobs.js                   # Jobs page functionality
+│   ├── results.js                # Results page functionality
+│   ├── admit-cards.js            # Admit cards page functionality
+│   ├── answer-keys.js            # Answer keys page functionality
+│   ├── syllabus.js               # Syllabus page functionality
+│   ├── search.js                 # Search page functionality
+│   ├── contact.js                # Contact page functionality
+│   ├── job-details.js            # Job details functionality
+│   ├── api-service.js            # API service layer
+│   ├── includes.js               # Header/footer includes
+│   ├── theme-toggle.js           # Theme switching
+│   ├── responsive.js             # Responsive functionality
+│   ├── admin-handler.js          # Admin panel functionality
+│   ├── admin-includes.js         # Admin includes
+│   └── admin-responsive.js       # Admin responsive features
 ├── images/
-│   └── logo.png            # Website logo
+│   ├── logo.webp                 # Website logo
+│   ├── newlogo.png               # Alternative logo
+│   ├── hero-image.png            # Hero section image
+│   └── [other assets]            # Various images and icons
 ├── admin/
-│   ├── index.html          # Admin login page
-│   ├── dashboard.html      # Admin dashboard
-│   └── jobs.html           # Admin jobs management page
-└── README.md               # Project documentation
+│   ├── index.html                # Admin login page
+│   ├── dashboard.html            # Admin dashboard
+│   ├── jobs.html                 # Admin jobs management
+│   ├── results.html              # Admin results management
+│   ├── admit-cards.html          # Admin admit cards management
+│   ├── answer-keys.html          # Admin answer keys management
+│   ├── syllabus.html             # Admin syllabus management
+│   ├── study-materials.html      # Admin study materials management
+│   └── admin-navbar.html         # Admin navigation
+├── server/
+│   ├── server.js                 # Main server file
+│   ├── config.js                 # Database configuration
+│   ├── db.js                     # Database connection
+│   ├── init-db.js                # Database initialization
+│   ├── package.json              # Server dependencies
+│   └── routes/
+│       ├── jobs.js               # Jobs API routes
+│       ├── results.js            # Results API routes
+│       ├── admitCards.js         # Admit cards API routes
+│       ├── answerKeys.js         # Answer keys API routes
+│       ├── syllabus.js           # Syllabus API routes
+│       ├── studyMaterials.js     # Study materials API routes
+│       ├── importantLinks.js     # Important links API routes
+│       └── admissions.js         # Admissions API routes
+├── start-server.sh               # Server startup script
+├── server-status.js              # Server status checker
+└── README.md                     # Project documentation
 ```
 
 ## How to Use
@@ -66,12 +152,37 @@ eznaukri/
 
 ## Server Setup
 
-The EasyNaukri website requires a backend server to be running to function properly. Follow these steps to set up and run the server:
+The JobGenie website requires a backend server to be running to function properly. Follow these steps to set up and run the server:
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm (comes with Node.js)
+- **Node.js** (v14 or higher)
+- **npm** (comes with Node.js)
+- **MySQL** (v5.7 or higher)
+
+### Database Setup
+
+1. **Install MySQL** and create a database:
+   ```sql
+   CREATE DATABASE jobgenie;
+   ```
+
+2. **Update database configuration** in `server/config.js`:
+   ```javascript
+   database: {
+       host: 'localhost',
+       user: 'your_username',
+       password: 'your_password',
+       database: 'jobgenie',
+       port: 3306
+   }
+   ```
+
+3. **Initialize the database** (optional - creates tables and sample data):
+   ```bash
+   cd eznaukri/server
+   node init-db.js
+   ```
 
 ### Starting the Server
 
@@ -91,6 +202,7 @@ The EasyNaukri website requires a backend server to be running to function prope
 5. The server should start and display a message like:
    ```
    Server running on port 3000
+   Database connected successfully
    ```
 
 ### Alternative: Using the Start Script
@@ -169,8 +281,55 @@ You can customize the website by:
 
 This project is open-source and available for personal and commercial use.
 
+## API Endpoints
+
+The backend provides RESTful API endpoints for all operations:
+
+- `GET /api/jobs` - Get all jobs
+- `GET /api/results` - Get all results
+- `GET /api/admit-cards` - Get all admit cards
+- `GET /api/answer-keys` - Get all answer keys
+- `GET /api/syllabus` - Get all syllabus
+- `GET /api/study-materials` - Get all study materials
+- `GET /api/important-links` - Get all important links
+- `GET /api/admissions` - Get all admissions
+
+## Deployment
+
+### Production Deployment
+1. Set up a production MySQL database
+2. Update `server/config.js` with production database credentials
+3. Install PM2 for process management: `npm install -g pm2`
+4. Start the server: `pm2 start server.js --name jobgenie`
+5. Set up reverse proxy (Nginx/Apache) if needed
+
+### Environment Variables
+For production, consider using environment variables:
+```bash
+export DB_HOST=your_production_host
+export DB_USER=your_production_user
+export DB_PASSWORD=your_production_password
+export DB_NAME=jobgenie
+export PORT=3000
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+## License
+
+This project is open-source and available for personal and commercial use.
+
 ## Credits
 
-- Font Awesome for icons
-- Google Fonts for typography
-- Inspired by SarkariResult.com
+- **Font Awesome** (v6.4.0) for icons
+- **Google Fonts** for typography
+- **Particles.js** for background animations
+- **Express.js** for the backend framework
+- **MySQL** for database management
+- Inspired by **SarkariResult.com**
