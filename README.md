@@ -180,7 +180,7 @@ The JobGenie website requires a backend server to be running to function properl
 
 3. **Initialize the database** (optional - creates tables and sample data):
    ```bash
-   cd eznaukri/server
+   cd JobGenie/server
    node init-db.js
    ```
 
@@ -189,7 +189,7 @@ The JobGenie website requires a backend server to be running to function properl
 1. Open a terminal/command prompt
 2. Navigate to the server directory:
    ```
-   cd eznaukri/server
+   cd JobGenie/server
    ```
 3. Install dependencies (first time only):
    ```
@@ -212,7 +212,7 @@ For convenience, you can use the provided start script:
 1. Open a terminal/command prompt
 2. Navigate to the JobGenie root directory:
    ```
-   cd eznaukri
+   cd JobGenie
    ```
 3. Make the script executable (Mac/Linux only):
    ```
@@ -237,7 +237,7 @@ If you see "Uncaught SyntaxError: Unexpected token '<'" errors in the console, i
 
 You can use the provided API test page to check if the server is running correctly:
 
-1. Open the file `eznaukri/api-test.html` in your browser
+1. Open the file `JobGenie/api-test.html` in your browser
 2. Click the "Run Test" button
 3. The test will show if the API endpoints are working
 
